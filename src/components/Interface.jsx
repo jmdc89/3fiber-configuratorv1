@@ -9,9 +9,13 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import { useConfigurator } from "../contexts/Configurator";
+
 export const Interface = () => {
   // const { tableWidth, setTableWidth, legs, setLegs, legsColor, setLegsColor } =
   //   useConfigurator();
+  const {legs, setLegs} = useConfigurator();
+
   return (
     <Box
       sx={{
@@ -42,8 +46,8 @@ export const Interface = () => {
           <FormControl>
             <FormLabel>Legs Layout</FormLabel>
             <RadioGroup
-            // value={legs}
-            // onChange={(e) => setLegs(parseInt(e.target.value))}
+            value={legs}
+            onChange={(e) => setLegs(parseInt(e.target.value))}
             >
               <FormControlLabel
                 value={0}
