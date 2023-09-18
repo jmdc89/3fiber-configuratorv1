@@ -1,7 +1,11 @@
 import { Environment, OrbitControls, Stage } from "@react-three/drei";
 import { Table } from "./Table";
+import { useConfigurator } from "../contexts/Configurator";
 
 export const Experience = () => {
+
+  const {legs} = useConfigurator(); //Force rerendering
+
   return (
     <>
       <Stage
