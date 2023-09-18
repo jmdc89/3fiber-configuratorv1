@@ -1,21 +1,23 @@
-import { OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls, Stage } from "@react-three/drei";
+import { Table } from "./Table";
 
 export const Experience = () => {
   return (
     <>
-      <Stage intensity={1.5} environment="city" shadows={{
-        type: "accumulative",
-        color: "#85ffbd",
-        colorBlend: 2,
-        opacity: 2,
-      }}
+      <Stage
+        intensity={1.5}
+        environment="city"
+        shadows={{
+          type: "accumulative",
+          color: "#d9afd9",
+          colorBlend: 2,
+          opacity: 2,
+        }}
         adjustCamera={2}
-      ></Stage>
-      <OrbitControls />
-      <mesh>
-        <meshNormalMaterial />
-        <boxBufferGeometry />
-      </mesh>
+      >
+        <Table />
+      </Stage>
+      <OrbitControls makeDefault minPolarAngle={0} maxPolarAngle={Math.PI / 2} />
     </>
   );
 };
