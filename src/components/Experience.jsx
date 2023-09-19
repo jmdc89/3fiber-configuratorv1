@@ -1,6 +1,7 @@
 import { Environment, OrbitControls, Stage } from "@react-three/drei";
 import { Table } from "./Table";
 import { useConfigurator } from "../contexts/Configurator";
+import { Wall } from "./Wall";
 
 export const Experience = () => {
 
@@ -19,7 +20,8 @@ export const Experience = () => {
         }}
         adjustCamera={2}
       >
-        <Table />
+        {/* <Table /> */}
+        <Wall />
       </Stage>
       <OrbitControls makeDefault minPolarAngle={0} maxPolarAngle={Math.PI / 2} />
     </>
