@@ -14,7 +14,7 @@ import { useConfigurator } from "../contexts/Configurator";
 export const Interface = () => {
   // const { tableWidth, setTableWidth, legs, setLegs, legsColor, setLegsColor } =
   //   useConfigurator();
-  const {legs, setLegs} = useConfigurator();
+  const {legs, setLegs, legsColor, setLegsColor} = useConfigurator();
 
   return (
     <Box
@@ -63,8 +63,8 @@ export const Interface = () => {
           <FormControl>
             <FormLabel>Legs Color</FormLabel>
             <RadioGroup
-            // value={legsColor}
-            // onChange={(e) => setLegsColor(e.target.value)}
+            value={legsColor}
+            onChange={(e) => setLegsColor(e.target.value)}
             >
               <FormControlLabel
                 value={"#777777"}
